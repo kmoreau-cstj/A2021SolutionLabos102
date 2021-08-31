@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Labo02-1AdditionnerDeuxNombres.cpp">
+    <ClCompile Include="Labo02-2OperateursArithmetiques.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
