@@ -7,13 +7,13 @@
 
 void main()
 {
-	// Déclaration des variables
+	// KM : Déclaration des variables
 	int nb1;
 	int nb2;
 	int operation;
 	int resteDivisionEntiere;
 
-	// Demander à l'utilisateur de taper deux nombres
+	// FR : Demander à l'utilisateur de taper deux nombre
 	std::cout << "Veuillez entrer un nombre entier : ";
 	std::cin >> nb1;
 
@@ -60,7 +60,7 @@ void main()
 	std::cout << "Veuillez entrer un nombre entier : ";
 	std::cin >> nb2;
 
-	// Calculer la division des deux nombres
+	// TODO : Calculer la division des deux nombres
 	// Si nb2 est différent de zéro on peut faire la division, sinon on affiche un message d'erreur
 	if (nb2 !=0)
 	{
