@@ -11,47 +11,62 @@ void main()
 
    // Déclaration des variables
    
-   int Nb1;
+
    int Nb2;
    int Nb3;
+   // Déclarer la variable contenant le résultat : maximum
+   int max;
 
    // Demander un nombre a l'utilisateur
 
-   std::cout << "Veuillez inserer un nombre entier :";
-   std::cin >> Nb1; 
+   std::cout << "Veuillez inserer un nombre entier :"; 
+   // Initialiser le maximum avec le premier nombre
+   std::cin >> max; 
 
    std::cout << "Veuillez inserer un nombre entier :";
    std::cin >> Nb2;
 
+   // Si le nb2 est plus grand que le maximum, alors le maximum prend la valeur du nb2
+   if (Nb2 > max)
+   {
+      max = Nb2;
+   }
+
    std::cout << "Veuillez inserer un nombre entier :";
    std::cin >> Nb3;
 
-   if (Nb1 >= Nb2 && Nb1 >= Nb3)
+   // Si le nb3 est plus grand que le maximum, alors le maximum prend la valeur du nb3
+   if (Nb3 > max)
    {
-      std::cout << Nb1 << " est le plus grand \n";
-
-   }
-   else
-   {
-      if (Nb2 >= Nb1 && Nb2 >= Nb3)
-      {
-         std::cout << Nb2 << " est le plus grand \n";
-      }
-      else
-      {
-         if (Nb3 >= Nb1 && Nb3 >= Nb2)
-         {
-            std::cout << Nb3 << " est le plus grand \n";
-         }
-      }
+      max = Nb3;
    }
 
+
+   // Afficher le résultat
+   std::cout << "le plus grand nombre est : " << max <<"\n";
+  
    
    system("pause");
 
    // plan de test
   
+   //Max  |  Nb2  |  Nb3
+   //1    
+   //2        2
+   //3        2       3
+   //résultat: 3
 
+   //Max  |  Nb2  |  Nb3
+   //3
+   //3        2 
+   //3                1
+   //résultat: 3
+
+   //Max  |  Nb2  |  Nb3
+   //-5
+   //9        9
+   //9                5
+   //résultat: 9
 
 
 
