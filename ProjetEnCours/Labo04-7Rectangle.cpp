@@ -34,6 +34,15 @@ void main()
 
 
    // TODO : dessiner les étoiles pour faire la forme rectangulaire avec deux boucles for
+   for (int ligne = 1; ligne <= hauteur; ligne++)
+   {
+      for (int nbEtoile = 1; nbEtoile <= longueur; nbEtoile++)
+      {
+         cout << "*";
+      }
+      cout << endl;
+
+   }
 
  
   
