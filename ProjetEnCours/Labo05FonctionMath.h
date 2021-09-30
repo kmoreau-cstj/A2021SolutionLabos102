@@ -10,3 +10,4 @@
 // Valeur est un paramètre de la fonction. Il va agir comme une variable. Cette variable est déjà initialisée
 double calculerCarre(double valeur);
 
+

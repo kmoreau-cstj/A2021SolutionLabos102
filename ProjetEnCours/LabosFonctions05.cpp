@@ -18,10 +18,10 @@ double CalculerMax(double valeur1, double valeur2, double valeur3)
 
 }
 
-unsigned int factorielle(unsigned int entier)
+double factorielle(unsigned int entier)
 {
 	// Déclaration des varaibles
-	unsigned int resultat = 1;
+	double resultat = 1;
 
 	for (unsigned int i = 1; i <= entier; i++)
 	{
@@ -29,4 +29,17 @@ unsigned int factorielle(unsigned int entier)
 	}
 
    return resultat;
+}
+
+bool savoirSiPair(int nb)
+{
+	/*if (nb % 2 == 0)
+	{
+		return true;
+	}
+	else
+		return false;*/
+	return !nb % 2;
+	//return nb % 2 == 0;
+
 }

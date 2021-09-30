@@ -1,3 +1,4 @@
+#include "Labo05FonctionMath.h"
 // But : écrire le code des fonctions pour créer la définition de chaque fonction
 // Auteur : 
 // Date : 
@@ -15,3 +16,4 @@ double calculerCarre(double valeur)
    return resultat;
    // return valeur*valeur;
 }
+
