@@ -19,8 +19,39 @@ void main()
    int jour;
    int mois;
    int annee;
+   int age;
+   int categorie;
+   int min;
+   int max;
 
 
+
+   cout << "Veullier entrer votre âge minimum----> ";
+   cin >> min;
+   cout << "Veullier entrer votre âge maximum----> ";
+   cin >> max;
+
+   //cout << VerifierAge(min, max);
+
+   
+    age=VerifierValeur(min,max,"dimention");
+    
+   cout << "Veuiller entrer une catégorie d'âge : ";
+   cin >> categorie;
+   while (!ValiderAgeCategorie3(age,categorie)) {
+      cout << "entrée non valide. Recommencer" << endl;
+      
+      age=VerifierValeur(min, max,"age");
+      cout << "Veuiller entrer une catégorie d'âge : ";
+      cin >> categorie;
+  
+   }
+   cout << "entrée valide" << endl;
+
+   //cout << "Votre âge fait partie de la catégorie: " << RetournerCategorie_Age(age) << endl;
+
+
+   /*
    cout << " ============= Test de la fonction dit oui ou non (vrai ou faux, ou true ou false) si son paramètre est pair ============" << endl;
    cout << "Veuillez entrer un nombre entier : ";
    cin >> nb;
@@ -36,7 +67,7 @@ void main()
       cout << nb << " est impair " << endl;
    }
   
-
+  */
 
 
 
