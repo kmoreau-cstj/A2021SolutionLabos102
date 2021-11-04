@@ -22,6 +22,20 @@ using namespace std;
 int calculerFrequence(vector<int> vecInt, int valeurCherchee);
 
 // Nom des paramètres (Félix)
-void afficherVecteur(vector<int> vecAAfficher, bool commenceAZero);
+// Surcharge de fonction est possible si dans la liste des paramètres il y a une différence (type d'un paramètre, ou le nombre de paramètres)
+void afficherVecteur(const vector<int>& vecAAfficher, bool commenceAZero);
+void afficherVecteur(vector<float> vecAAfficher, bool commenceAZero);
+void afficherVecteur(vector<char> vecAAfficher, bool commenceAZero);
+void afficherVecteur(vector<string> vecAAfficher, bool commenceAZero);
+void afficherVecteur(vector<double> vecAAfficher, bool commenceAZero);
+
+
+
+
 void afficherContenuPairouImpair(vector<int> vecAAfficher, bool commenceAZero, bool lesPairs);
 void afficherVecteurParLaFin(vector<int> vecAAfficher, bool commenceAZero);
+
+void supprimerValeur(vector<int>& vecASupprimer, int valeurASupprimer); 
+vector<int> supprimerValeur2(vector<int> vecASupprimer, int valeurASupprimer);
+
+void echangerValeur(int& verreBleu, int& verreRouge);

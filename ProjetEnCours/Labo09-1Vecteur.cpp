@@ -27,7 +27,7 @@ int main()
  
    // Déclaration des variables
    vector<int> vec{ 12,0,42,0,0,68,0,-15,89,0,0,0,13,27,52,2,0,7,0,0 };
-
+   vector<string> vecMot{ "Bonjour", "Salut", "Bienvenue", "Allo", "Hey Yo man !", "Yo!" };
    // Afficher la taille du vecteur
    cout << "Taille du vecteur " << vec.size() << endl;
 /*
@@ -51,10 +51,32 @@ int main()
    afficherVecteur(vec, false);
    */
    // Afficher les cases du vecteur dont le contenu est pair
-   afficherContenuPairouImpair(vec, false, false);
+   //afficherContenuPairouImpair(vec, false, false);
 
    // Afficher le vecteur en commençant par la fin.
-   afficherVecteurParLaFin(vec, true);
+   //afficherVecteurParLaFin(vec, true);
+
+   // Fonction qui supprime les cases contenant une certaine valeur passée en paramètre, par exemple 0
+   vec = supprimerValeur2(vec, 0);
+   cout << "Contenu de vec après suppression" << endl;
+   afficherVecteur(vec, true);
+
+   afficherVecteur(vecMot, false);
+
+   int verreBleu = 10;
+   int verreRouge = 20;
+
+   cout << "Avant l'échange" << endl;
+   cout << "Contenu du verre bleu : " << verreBleu << endl;
+   cout << "Contenu du verre rouge : " << verreRouge << endl;
+
+
+   echangerValeur(verreBleu, verreRouge);
+
+   cout << "Après l'échange" << endl;
+   cout << "Contenu du verre bleu : " << verreBleu << endl;
+   cout << "Contenu du verre rouge : " << verreRouge << endl;
+
 
    system("pause");
    return 0;
