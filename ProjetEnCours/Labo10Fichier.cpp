@@ -28,6 +28,7 @@ int main()
    const string OK = "Succès";
    const string KO = "Échec";
    const string STAT = "Statistiques";
+   const string MOYENNE = "Moyenne";
 
 
    const char MOTIF1 = '-';
@@ -55,7 +56,15 @@ int main()
    double examen1;
    double examen2;
    double examenFinal;
+
+
+
    double total;
+   double moyenne1 = 0;
+   double moyenne2 = 0;
+   double moyenne3 = 0;
+   double moyenneTotal = 0;
+   int nbEtudiant = 0;
 
 
 
@@ -79,6 +88,18 @@ int main()
    }
 
    cout << "Tout va pour le mieux !" << endl;
+
+   // On formate l'affiche des nombres à virgule pour avoir systématiquement 2 chiffres après la virgule.
+   // Par défaut le format pour les nombres à virgule est le format scientifique. la virgule se déplace tout le temps
+   // 123.456 => 1.23456e2
+   // L'autre mode est le mode fixed, donc la virgule ne bouge plus
+   // 123.456  => 123.456
+   // 1234.567 => 1234.57
+   // par défaut la console affiche 6 chiffres significatifs (partie entière + partie décimale)
+
+   
+   // Pour avoir deux chiffres après la virgule
+   canalSortie << fixed << setprecision(2);
 
    /*
    -------------------------------------------------------------------------------------
@@ -116,10 +137,16 @@ int main()
    // On affiche le résultat si on a été capable de lire dans le fichier
    while (!canalEntree.eof())              // e end o of et f pour file eof() c'Est une fonction donc il faut des ()
    {
+      // ICI ON traite les données  : faire des calculs au début de la boucle
       total = examen1 + examen2 + examenFinal;
       canalSortie << setfill(MOTIF2) << left << setw(COL1) << etudiant << right << setw(COL2) << examen1 << setw(COL3) << examen2 << setw(COL4) << examenFinal;
       canalSortie << setw(COL5) << total << setw(COL6) << (  total >= NOTE_PASSAGE? OK : KO ) << endl;
-
+      moyenne1 += examen1;
+      moyenne2 += examen2;
+      moyenne3 += examenFinal;
+      moyenneTotal += total;
+      // On a un étuidiant de plus
+      nbEtudiant++;
 
       // On TENTE de lire le prochain enregistrement
       getline(canalEntree, etudiant, '\t');
@@ -131,14 +158,29 @@ int main()
 
    }
 
+   // Calcul de la moyenne
+   if (nbEtudiant > 0)
+   {
+      moyenne1 /= nbEtudiant;
+      moyenne2 /= nbEtudiant;
+      moyenne3 /= nbEtudiant;
+      moyenneTotal /= nbEtudiant;
+   }
+
+
+
    // On va écrire le pied de page
    canalSortie << setfill(MOTIF1) << setw(LARGEUR) << "" << endl;
    canalSortie << STAT << endl;
+   canalSortie << setfill(MOTIF2) << left << setw(COL1) << MOYENNE << right  << setw(COL2) << moyenne1 << setw(COL3) << moyenne2 << setw(COL4) << moyenne3 << setw(COL5) << moyenneTotal << endl;
+   canalSortie << setfill(MOTIF1) << setw(LARGEUR) << "" << endl;
 
 
 
    cout << "la fin du fichier a été atteinte" << endl;
-   
+   canalEntree.close();
+   canalSortie.close();    // Cela force le SE à écrire les données sur le disque dur.
+
  
 
 
