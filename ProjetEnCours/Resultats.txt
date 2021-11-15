@@ -1,20 +1,20 @@
-------------------------------------------------------------------------------
-                Résultats du cours de programmation structurée                
-------------------------------------------------------------------------------
-Nom de l'étudiant           Evaluation 1   Eval 2   Eval 3   Total   Résultats
-------------------------------------------------------------------------------
-Audet Nicole                       30.00    30.00    28.00   88.00      Succès
-Boileau Claude                     10.00    20.00    30.00   60.00      Succès
-Bonhomme Fernand                   30.00    30.00    30.00   90.00      Succès
-Charron Guy                         2.00     2.00     2.00    6.00       Échec
-Dubreuil Lucienne                  30.00    30.00    39.00   99.00      Succès
-Etienne Luc                        10.00    10.00    10.00   30.00       Échec
-Fortin Marie-Noelle                20.00    18.00    18.00   56.00       Échec
-Fournier Richard                   20.00    20.00    21.00   61.00      Succès
-Lalonde Claudine                   15.00    20.00    25.00   60.00      Succès
-Malouin Jules                      20.00    10.00    12.00   42.00       Échec
-Maranda Armande                    30.00    30.00    38.00   98.00      Succès
-------------------------------------------------------------------------------
+------------------------------------------------------------------------
+                 Résultats du cours d'objets connectés                 
+------------------------------------------------------------------------
+Nom/Prénom de l'étudiant    Eval 1   Eval 2   Eval 3   Total   Résultats
+------------------------------------------------------------------------
+Audet Nicole                  30.0     30.0     28.0    88.0    Réussite
+Boileau Claude                10.0     20.0     30.0    60.0    Réussite
+Bonhomme Fernand              30.0     30.0     30.0    90.0    Réussite
+Charron Guy                    2.0      2.0      2.0     6.0       Échec
+Dubreuil Lucienne             30.0     30.0     39.0    99.0    Réussite
+Etienne Luc                   10.0     10.0     10.0    30.0       Échec
+Fortin Marie-Noelle           20.0     18.0     18.0    56.0       Échec
+Fournier Richard              20.0     20.0     21.0    61.0    Réussite
+Lalonde Claudine              15.0     20.0     25.0    60.0    Réussite
+Malouin Jules                 20.0     10.0     12.0    42.0       Échec
+Maranda Armande               30.0     30.0     38.0    98.0    Réussite
+------------------------------------------------------------------------
 Statistiques
-Moyenne                            19.73    20.00    23.00   62.73
-------------------------------------------------------------------------------
+Moyenne                       19.7     20.0     23.0    62.7
+------------------------------------------------------------------------

@@ -15,13 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Exercice1.txt">
-      <Filter>Fichiers de ressources</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Labo10-1Fichier.cpp">
+    <ClCompile Include="Labo11FichierEtStructure.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Labo11Fonctions.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Labo11Fonctions.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Donnees.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
+    <Text Include="Resultats.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
   </ItemGroup>
 </Project>
