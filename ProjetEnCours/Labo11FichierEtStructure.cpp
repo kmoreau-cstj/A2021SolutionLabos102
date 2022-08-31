@@ -1,16 +1,18 @@
-// But : Utiliser les fichiers pour stocker les données des utilisateurs
-// Calculer la moyenne du groupe d'étudiants
+// But : Utiliser les fichiers pour stocker les donnÃ©es des utilisateurs
+// Calculer la moyenne du groupe d'Ã©tudiants
 // Auteur : Karine Moreau
 // Date : 2021-11-08
 
 #include "Labo11Fonctions.h"
 
+// Ajout de code par le prof
+
 int main()
 {
    setlocale(LC_ALL, "");
     
-   // Déclaration des variables
-   ifstream canalEntree = ouvrirFichierEnLecture(NOM_FICHIER);        // i pour input f pour file et stream pour canal, voie de circulation, route, ... i pour aller du disque dur vers la mémoire
+   // DÃ©claration des variables
+   ifstream canalEntree = ouvrirFichierEnLecture(NOM_FICHIER);        // i pour input f pour file et stream pour canal, voie de circulation, route, ... i pour aller du disque dur vers la mÃ©moire
    ofstream canalSortie = ouvrirFichierEnEcriture(RESULTAT);
 
    info unEtudiantEtSesNotes;
@@ -26,10 +28,10 @@ int main()
 
    lireEnregistrement(canalEntree, unEtudiantEtSesNotes);
 
-   // On affiche le résultat si on a été capable de lire dans le fichier
+   // On affiche le rÃ©sultat si on a Ã©tÃ© capable de lire dans le fichier
    while (!canalEntree.eof())              // e end o of et f pour file eof() c'Est une fonction donc il faut des ()
    {
-      // ICI ON traite les données  : faire des calculs au début de la boucle
+      // ICI ON traite les donnÃ©es  : faire des calculs au dÃ©but de la boucle
       calculerResultats(unEtudiantEtSesNotes, totalMoyennes);
 
       canalSortie << setfill(MOTIF2) << left << setw(COL1) << unEtudiantEtSesNotes.etudiant << right << setw(COL2) << unEtudiantEtSesNotes.examen1 << setw(COL3) << unEtudiantEtSesNotes.examen2 << setw(COL4) << unEtudiantEtSesNotes.examenFinal;
@@ -50,7 +52,7 @@ int main()
 
 
 
-   // On va écrire le pied de page
+   // On va Ã©crire le pied de page
    canalSortie << setfill(MOTIF1) << setw(LARGEUR) << "" << endl;
    canalSortie << STAT << endl;
    canalSortie << setfill(MOTIF2) << left << setw(COL1) << MOYENNE << right  << setw(COL2) << totalMoyennes.moyenne1 << setw(COL3) << totalMoyennes.moyenne2 << setw(COL4) << totalMoyennes.moyenne3 << setw(COL5) << totalMoyennes.moyenneTotal << endl;
@@ -58,9 +60,9 @@ int main()
 
 
 
-   cout << "la fin du fichier a été atteinte" << endl;
+   cout << "la fin du fichier a Ã©tÃ© atteinte" << endl;
    canalEntree.close();
-   canalSortie.close();    // Cela force le SE à écrire les données sur le disque dur.
+   canalSortie.close();    // Cela force le SE Ã  Ã©crire les donnÃ©es sur le disque dur.
 
  
 
